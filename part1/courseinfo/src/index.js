@@ -10,7 +10,7 @@ const App = () => {
     <>
       <h1>Greetings</h1>
       <Hello name="Maya" age={10 + 10} />
-      <Hello name={name} age={10} />
+      <Hello name={name} age={age} />
     </>
   );
 };
