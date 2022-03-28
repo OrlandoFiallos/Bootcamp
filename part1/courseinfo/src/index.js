@@ -4,6 +4,7 @@ import React, { useState } from "react";
 import { Display } from "./Display";
 import { Button } from "./Button";
 import { ContadorClicks } from "./ContadorClicks";
+import { Unicafe } from "./Ejercicios 1.6-1.14/Unicafe";
 
 const App = () => {
   const [contador, setContador] = useState(1);
@@ -24,6 +25,9 @@ const App = () => {
       <Hello name="Manuel" age="24" />
       <hr></hr>
       <ContadorClicks />
+      <hr></hr>
+      <h1>Unicafe</h1>
+      <Unicafe />
     </>
   );
 };
