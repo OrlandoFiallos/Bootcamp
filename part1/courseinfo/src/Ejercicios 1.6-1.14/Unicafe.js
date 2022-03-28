@@ -20,6 +20,12 @@ export const Unicafe = () => {
     setComments({ ...comments, bad: comments.bad + 1 });
   };
 
+  const all = comments.good + comments.neutral + comments.bad;
+
+  const average = (comments.bad * -1 + comments.good * 1) / all;
+
+  const percenPositives = (comments.good / all) * 100;
+
   return (
     <>
       <h1>Give feedback</h1>
@@ -31,6 +37,9 @@ export const Unicafe = () => {
       <p>good {comments.good}</p>
       <p>neutral {comments.neutral}</p>
       <p>bad {comments.bad}</p>
+      <p>all {all}</p>
+      <p>average {average}</p>
+      <p>positive {percenPositives} %</p>
     </>
   );
 };
