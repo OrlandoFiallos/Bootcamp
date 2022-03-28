@@ -3,6 +3,7 @@ import { Hello } from "./Hello";
 import React, { useState } from "react";
 import { Display } from "./Display";
 import { Button } from "./Button";
+import { ContadorClicks } from "./ContadorClicks";
 
 const App = () => {
   const [contador, setContador] = useState(1);
@@ -21,6 +22,8 @@ const App = () => {
       <Button handleClick={reducirUno} text="Reducir en uno" />
       <Button handleClick={setToZero} text="Resetear" />
       <Hello name="Manuel" age="24" />
+      <hr></hr>
+      <ContadorClicks />
     </>
   );
 };
