@@ -1,5 +1,6 @@
 import React from "react";
 import { useState } from "react";
+import { Statistics } from "./Statistics";
 
 export const Unicafe = () => {
   const [comments, setComments] = useState({
@@ -33,13 +34,14 @@ export const Unicafe = () => {
       <button onClick={handleNeutral}>neutral</button>
       <button onClick={handleBad}>bad</button>
       <br />
-      <h2>stadistics</h2>
-      <p>good {comments.good}</p>
-      <p>neutral {comments.neutral}</p>
-      <p>bad {comments.bad}</p>
-      <p>all {all}</p>
-      <p>average {average}</p>
-      <p>positive {percenPositives} %</p>
+      <Statistics
+        good={comments.good}
+        neutral={comments.neutral}
+        bad={comments.bad}
+        all={all}
+        average={average}
+        positive={percenPositives}
+      />
     </>
   );
 };
