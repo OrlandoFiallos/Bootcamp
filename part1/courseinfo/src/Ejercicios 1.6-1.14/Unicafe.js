@@ -34,14 +34,18 @@ export const Unicafe = () => {
       <button onClick={handleNeutral}>neutral</button>
       <button onClick={handleBad}>bad</button>
       <br />
-      <Statistics
-        good={comments.good}
-        neutral={comments.neutral}
-        bad={comments.bad}
-        all={all}
-        average={average}
-        positive={percenPositives}
-      />
+      {comments.good === 0 ? (
+        <p>No feedback given</p>
+      ) : (
+        <Statistics
+          good={comments.good}
+          neutral={comments.neutral}
+          bad={comments.bad}
+          all={all}
+          average={average}
+          positive={percenPositives}
+        />
+      )}
     </>
   );
 };

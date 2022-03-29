@@ -1,6 +1,14 @@
 import React from "react";
 
-export const Statistics = ({ good, neutral, bad, all, average, positive }) => {
+export const Statistics = ({
+  good,
+  neutral,
+  bad,
+  all,
+  average,
+  positive,
+  text,
+}) => {
   return (
     <>
       <h2>statistics</h2>
@@ -10,6 +18,7 @@ export const Statistics = ({ good, neutral, bad, all, average, positive }) => {
       <p>all {all}</p>
       <p>average {average}</p>
       <p>positive {positive} %</p>
+      <p>{text}</p>
     </>
   );
 };
