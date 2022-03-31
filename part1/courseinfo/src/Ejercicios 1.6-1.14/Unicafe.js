@@ -1,5 +1,6 @@
 import React from "react";
 import { useState } from "react";
+import { Button } from "../Button";
 import { Statistics } from "./Statistics";
 
 export const Unicafe = () => {
@@ -30,9 +31,9 @@ export const Unicafe = () => {
   return (
     <>
       <h1>Give feedback</h1>
-      <button onClick={handleGood}>good</button>
-      <button onClick={handleNeutral}>neutral</button>
-      <button onClick={handleBad}>bad</button>
+      <Button handleEvent={handleGood} text={"good"} />
+      <Button handleEvent={handleNeutral} text={"neutral"} />
+      <Button handleEvent={handleBad} text={"bad"} />
       <br />
       {comments.good === 0 ? (
         <p>No feedback given</p>
