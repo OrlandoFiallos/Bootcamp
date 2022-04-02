@@ -5,6 +5,7 @@ import { Display } from "./Display";
 import { Button } from "./Button";
 import { ContadorClicks } from "./ContadorClicks";
 import { Unicafe } from "./Ejercicios 1.6-1.14/Unicafe";
+import { Arrays } from "./Renderizando una colección, módulos/Arrays";
 
 const App = () => {
   const [contador, setContador] = useState(1);
@@ -28,6 +29,8 @@ const App = () => {
       <hr></hr>
       <h1>Unicafe</h1>
       <Unicafe />
+      <hr></hr>
+      <Arrays />
     </>
   );
 };

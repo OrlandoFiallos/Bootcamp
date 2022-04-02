@@ -27,7 +27,9 @@ export const Unicafe = () => {
   const average = (comments.bad * -1 + comments.good * 1) / all;
 
   const percenPositives = (comments.good / all) * 100;
-
+  if (comments === { good: 0, neutral: 0, bad: 0 }) {
+    return "No comments given";
+  }
   return (
     <>
       <h1>Give feedback</h1>
@@ -35,18 +37,15 @@ export const Unicafe = () => {
       <Button handleEvent={handleNeutral} text={"neutral"} />
       <Button handleEvent={handleBad} text={"bad"} />
       <br />
-      {comments.good === 0 ? (
-        <p>No feedback given</p>
-      ) : (
-        <Statistics
-          good={comments.good}
-          neutral={comments.neutral}
-          bad={comments.bad}
-          all={all}
-          average={average}
-          positive={percenPositives}
-        />
-      )}
+
+      <Statistics
+        good={comments.good}
+        neutral={comments.neutral}
+        bad={comments.bad}
+        all={all}
+        average={average}
+        positive={percenPositives}
+      />
     </>
   );
 };
